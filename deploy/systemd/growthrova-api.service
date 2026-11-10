@@ -1,0 +1,26 @@
+[Unit]
+Description=Growthrova private API
+After=network.target
+
+[Service]
+Type=simple
+User=growthrova
+Group=growthrova
+WorkingDirectory=/home/growthrova/app/backend
+EnvironmentFile=/home/growthrova/.config/growthrova/preview.env
+EnvironmentFile=/home/growthrova/.config/growthrova/writer.env
+EnvironmentFile=/home/growthrova/.config/growthrova/runway-api.env
+EnvironmentFile=/home/growthrova/.config/growthrova/showcase-images-20261104.env
+EnvironmentFile=/home/growthrova/.config/growthrova/runway-images.env
+EnvironmentFile=/home/growthrova/.config/growthrova/google-images.env
+EnvironmentFile=/home/growthrova/.config/growthrova/audit-test-20261109.env
+Environment=GROWTHROVA_RESEARCH_RENDER_PYTHON=/home/growthrova/.venv/bin/python
+Environment=GROWTHROVA_RESEARCH_BROWSER_EXECUTABLE=/opt/growthrova-research-browser/chrome-headless-shell
+ExecStart=/home/growthrova/.venv/bin/gunicorn --workers 1 --threads 1 --bind 127.0.0.1:4190 --timeout 90 business_growthrova_preview:from_environment()
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
