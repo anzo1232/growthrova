@@ -1,0 +1,71 @@
+{
+  "posts": [
+    {
+      "angle": "Plan a service visit",
+      "hook": "Give your bicycle a place in the diary.",
+      "caption": "Bicycle servicing and brake adjustments are available at our workshop. If a service has slipped down your list, make a little time to discuss what your bicycle needs before you plan your next ride.",
+      "callToAction": "Contact the workshop about bicycle servicing",
+      "evidence": [
+        {
+          "id": "fact-0",
+          "quote": "We offer bicycle servicing and brake adjustments."
+        }
+      ]
+    },
+    {
+      "angle": "Focus on the brakes",
+      "hook": "Start the conversation with your brakes.",
+      "caption": "Brake adjustments are part of our workshop services. Tell us what you have noticed and ask about bringing your bicycle in. A clear description is a useful starting point for a conversation with the workshop.",
+      "callToAction": "Ask the workshop about brake adjustments",
+      "evidence": [
+        {
+          "id": "fact-0",
+          "quote": "We offer bicycle servicing and brake adjustments."
+        }
+      ]
+    },
+    {
+      "angle": "Prepare your enquiry",
+      "hook": "A useful first message starts with your bicycle.",
+      "caption": "Looking into bicycle servicing? Share the type of bicycle you ride and the work you want to discuss when you contact our workshop. We offer bicycle servicing and brake adjustments, so you can ask about either service in your enquiry.",
+      "callToAction": "Send the workshop your service enquiry",
+      "evidence": [
+        {
+          "id": "fact-0",
+          "quote": "We offer bicycle servicing and brake adjustments."
+        }
+      ]
+    }
+  ],
+  "reel": {
+    "hook": "From your bicycle to a workshop enquiry.",
+    "caption": "Bicycle servicing and brake adjustments are available at our workshop. Use your next enquiry to tell us which service you want to discuss and what you have noticed about your bicycle.",
+    "callToAction": "Contact the workshop to discuss your bicycle",
+    "evidence": [
+      {
+        "id": "fact-0",
+        "quote": "We offer bicycle servicing and brake adjustments."
+      }
+    ],
+    "shots": [
+      {
+        "seconds": 7,
+        "visual": "Owner-authorised wide shot of the real workshop; hold production if unavailable.",
+        "voiceover": "Our workshop offers bicycle servicing and brake adjustments.",
+        "onScreen": "Bicycle servicing"
+      },
+      {
+        "seconds": 7,
+        "visual": "Owner-authorised close view of a real bicycle brake; no invented repair demonstration.",
+        "voiceover": "Ask about a brake adjustment or discuss a service for your bicycle.",
+        "onScreen": "Brake adjustments"
+      },
+      {
+        "seconds": 7,
+        "visual": "Existing exact approved logo and owner-confirmed contact card; hold if unavailable.",
+        "voiceover": "Tell the workshop what you want to discuss when you get in touch.",
+        "onScreen": "Contact the workshop"
+      }
+    ]
+  }
+}

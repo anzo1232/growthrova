@@ -1,0 +1,94 @@
+import assert from 'node:assert/strict';
+import {build} from 'esbuild';
+import {createRequire} from 'node:module';
+import React from 'react';
+const require=createRequire(import.meta.url);
+const built=await build({entryPoints:['src/GrowthrovaImageCandidates.jsx'],bundle:true,write:false,format:'cjs',platform:'node',jsx:'automatic',external:['react','react/jsx-runtime'],logLevel:'silent'});
+let index=0,refIndex=0,states=[],refs=[];
+const hooks={...React,useEffect:()=>{},useState:initial=>{const i=index++;if(!(i in states))states[i]=typeof initial==='function'?initial():initial;return[states[i],v=>states[i]=typeof v==='function'?v(states[i]):v];},useRef:initial=>{const i=refIndex++;return refs[i]||(refs[i]={current:initial});}};
+const module={exports:{}};
+new Function('require','module','exports',built.outputFiles[0].text)(name=>name==='react'?hooks:require(name),module,module.exports);
+const flatten=node=>!node||typeof node!=='object'?[]:[node,...React.Children.toArray(node.props?.children).flatMap(flatten)];
+let calls=[],saved=[],release,estimateWait=null;
+let estimateResponse={state:'available',model:'gpt-image-1.5',reservationMicrousd:45000,proposedImageCredits:1,customerCreditsCharged:0};
+const parent={operationId:'a'.repeat(32),day:1,revision:1,state:'proposed',sha256:'f'.repeat(64),issues:[],origin:'generated',size:'1024x1024',quality:'low',visualBrief:'Illustrative wheel detail with quiet space for exact composed words.'};
+const sibling={...parent,operationId:'b'.repeat(32)};
+const api=async(url,options)=>{
+ calls.push({url,options});
+ if(url.endsWith('/estimate')){if(estimateWait)await estimateWait;return estimateResponse;}
+ if(!options)return {available:true,candidates:[...saved,parent,sibling],selection:{selectedIds:[parent.operationId],version:1}};
+ assert.equal(options.method,'POST');assert.equal(url,'/images');
+ await new Promise(resolve=>release=resolve);
+ saved=[{...parent,...options.data,parentSha256:parent.sha256,alternativeType:'new_illustration',state:'uncertain'}];
+ throw Error('Acknowledgement lost');
+};
+const record={revision:1,document:{posts:[{day:1},{day:2}],creatives:[]}};
+const render=(extra={})=>{index=0;refIndex=0;return flatten(module.exports.default({api,url:'/images',record,...extra}));};
+const button=(nodes,label)=>nodes.find(n=>n.type==='button'&&n.props.children===label);
+const plan=nodes=>nodes.find(n=>n.type==='button'&&n.props['aria-label']==='Plan alternative for '+parent.operationId);
+states[0]={available:true,candidates:[parent,sibling],selection:{selectedIds:[parent.operationId],version:1}};
+let nodes=render();
+assert.ok(plan(nodes),'Missing scoped alternative action');
+plan(nodes).props.onClick();nodes=render();
+assert.equal(calls.length,0,'Planning is free');
+assert.equal(button(nodes,'Generate alternative background').props.disabled,true,'Unchanged direction cannot generate');
+let editor=nodes.find(n=>n.type==='textarea'&&n.props['aria-label']==='Alternative visual direction');
+assert.equal(editor.props.value,parent.visualBrief);
+editor.props.onChange({target:{value:'Illustrative wheel detail on a warm background with more space on the left.'}});
+nodes=render();
+assert.equal(button(nodes,'Generate alternative background').props.disabled,true,'Exact cost must be reviewed before an alternative can bill');
+assert.ok(button(nodes,'Check alternative cost'),'Missing nonbillable cost check');
+await button(nodes,'Check alternative cost').props.onClick();
+nodes=render();assert.equal(button(nodes,'Generate alternative background').props.disabled,false,'A checked alternative needs no creative or photos');
+const words=nodes.filter(n=>n.type==='p').map(n=>React.Children.toArray(n.props.children).join(' ')).join(' ');
+assert.match(words,/\$0\.045000/,'Show conservative provider cash estimate before generation');
+assert.match(words,/not a customer price/i);
+assert.equal(calls.length,1,'Cost check is separate from inference');
+const pending=button(nodes,'Generate alternative background').props.onClick();
+await button(nodes,'Generate alternative background').props.onClick();assert.equal(calls.length,2);
+assert.equal(calls[1].options.data.parentOperationId,parent.operationId);assert.equal(calls[1].options.data.day,1);
+release();await pending;nodes=render();
+assert.equal(button(nodes,'Generate alternative background').props.disabled,true,'Unknown acknowledgement locks new generation');
+await button(nodes,'Check saved image requests').props.onClick();nodes=render();
+assert.equal(calls.filter(c=>c.options&&!c.url.endsWith('/estimate')).length,1,'Recovery cannot trigger inference');
+assert.equal(nodes.filter(n=>n.type==='article').length,3,'Original and siblings remain visible');
+assert.ok(nodes.some(n=>n.type==='input'&&n.props['aria-label']==='Keep background '+parent.operationId&&n.props.checked));
+button(nodes,'Cancel alternative').props.onClick();nodes=render();
+assert.equal(nodes.some(n=>n.type==='textarea'&&n.props['aria-label']==='Alternative visual direction'),false);
+// Unfunded capability permits planning, but never generation.
+states[0]={...states[0],available:false};nodes=render();plan(nodes).props.onClick();nodes=render();
+assert.equal(button(nodes,'Generate alternative background').props.disabled,true);
+assert.equal(plan(render({disabled:true})).props.disabled,true);
+
+// Quotes bind the exact edit and saved scope, and never authorise stale handlers.
+states=[];refs=[];calls=[];saved=[];
+states[0]={available:true,candidates:[parent,sibling],selection:{selectedIds:[parent.operationId],version:1}};
+plan(render()).props.onClick();
+const edit=value=>render().find(n=>n.props['aria-label']==='Alternative visual direction').props.onChange({target:{value}});
+edit('Illustrative wheel scene with warm colours and generous headline space.');
+await button(render(),'Check alternative cost').props.onClick();
+const staleGenerate=button(render(),'Generate alternative background').props.onClick;
+edit('Illustrative wheel scene with cool colours and generous headline space.');
+assert.equal(button(render(),'Generate alternative background').props.disabled,true,'Edited direction needs a new estimate');
+await staleGenerate();assert.equal(calls.length,1,'Old enabled callbacks cannot use a previous quote');
+let finishEstimate;estimateWait=new Promise(resolve=>finishEstimate=resolve);
+const checking=button(render(),'Check alternative cost').props.onClick();
+await button(render(),'Check alternative cost').props.onClick();
+assert.equal(calls.length,2,'Double cost checks share the submission lock');
+record.revision=2;render();finishEstimate();await checking;estimateWait=null;
+assert.equal(button(render(),'Generate alternative background').props.disabled,true,'Late estimate cannot authorise changed saved context');
+for(const state of ['unavailable','budget_held']){
+ estimateResponse={state,reservationMicrousd:state==='unavailable'?null:45000};
+ await button(render(),'Check alternative cost').props.onClick();
+ assert.equal(button(render(),'Generate alternative background').props.disabled,true,state+' must block inference');
+}
+assert.ok(calls.every(c=>c.url.endsWith('/estimate')),'Every action here was nonbillable');
+assert.deepEqual(states[0].selection.selectedIds,[parent.operationId]);
+
+estimateResponse={state:'available',reservationMicrousd:45000};
+await button(render(),'Check alternative cost').props.onClick();
+const oldSourceSubmit=button(render(),'Generate alternative background').props.onClick;
+states[0]={...states[0],sourceChoice:{route:'create',version:2}};
+assert.equal(button(render(),'Generate alternative background').props.disabled,true,'Changed source choice invalidates a previous estimate');
+const beforeSourceReplay=calls.length;await oldSourceSubmit();
+assert.equal(calls.length,beforeSourceReplay,'A stale source handler cannot use an earlier cost check');

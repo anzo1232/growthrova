@@ -1,0 +1,108 @@
+{
+  "concepts": [
+    {
+      "buyerMotivation": "Prepare for the weekday commute",
+      "heroVisual": "A bicycle wheel opens a narrow path through a compressed weekday timetable.",
+      "conceptLogic": "The opened path turns servicing into the visible enabler of a reliable commute.",
+      "headline": "Make room for your next ride",
+      "callToAction": "Contact the workshop.",
+      "visualDirection": "Illustrative bicycle wheel beside a commuter bag, angled daylight and clear upper space for editable words.",
+      "evidence": [
+        {
+          "id": "fact-0",
+          "quote": "We offer bicycle servicing and brake adjustments."
+        }
+      ],
+      "supportingLine": "Bicycle servicing and brake adjustments."
+    },
+    {
+      "buyerMotivation": "Discuss a brake adjustment",
+      "heroVisual": "A brake cable pulls a bold red stopping line into a controlled smooth curve.",
+      "conceptLogic": "The physical change makes bicycle servicing and brake attention understandable.",
+      "headline": "Give your brakes some attention",
+      "callToAction": "Contact the workshop.",
+      "visualDirection": "Close illustrative study of a brake lever and cable on a quiet background; copy sits on the left, no invented workshop.",
+      "evidence": [
+        {
+          "id": "fact-0",
+          "quote": "We offer bicycle servicing and brake adjustments."
+        }
+      ],
+      "supportingLine": "Bicycle servicing and brake adjustments."
+    },
+    {
+      "buyerMotivation": "Plan bicycle servicing",
+      "heroVisual": "A bicycle silhouette is carefully unfolded from a precise workshop service sheet.",
+      "conceptLogic": "The unfolding bicycle makes the servicing offer tangible without inventing a real workshop.",
+      "headline": "A place for bicycle servicing",
+      "callToAction": "Contact the workshop.",
+      "visualDirection": "Editorial graphic with a single bicycle silhouette and a generous typographic zone, without documentary job imagery.",
+      "evidence": [
+        {
+          "id": "fact-0",
+          "quote": "We offer bicycle servicing and brake adjustments."
+        }
+      ],
+      "supportingLine": "Bicycle servicing and brake adjustments."
+    },
+    {
+      "buyerMotivation": "Understand what to discuss before booking",
+      "heroVisual": "A bicycle component tray is arranged as a clear conversation map around one central wheel.",
+      "conceptLogic": "The component map turns an uncertain enquiry into a structured service conversation.",
+      "headline": "Start with a conversation",
+      "callToAction": "Contact the workshop.",
+      "visualDirection": "An open notebook with a pencil and softly lit blank paper, lower space for editable words.",
+      "evidence": [
+        {
+          "id": "fact-0",
+          "quote": "We offer bicycle servicing and brake adjustments."
+        }
+      ],
+      "supportingLine": "Bicycle servicing and brake adjustments."
+    },
+    {
+      "buyerMotivation": "Return to cycling after time away",
+      "heroVisual": "A dormant bicycle shadow gains solid colour as it crosses a doorway into daylight.",
+      "conceptLogic": "The transition from shadow to solid bicycle visualises returning to regular cycling.",
+      "headline": "Bring your bicycle back into the week",
+      "callToAction": "Contact the workshop.",
+      "visualDirection": "Illustrative hallway with a single bicycle silhouette and jacket, generous right headline area.",
+      "evidence": [
+        {
+          "id": "fact-0",
+          "quote": "We offer bicycle servicing and brake adjustments."
+        }
+      ],
+      "supportingLine": "Bicycle servicing and brake adjustments."
+    },
+    {
+      "buyerMotivation": "Arrange care around a busy schedule",
+      "heroVisual": "A bicycle wheel slots precisely into a single open space within a folded paper calendar.",
+      "conceptLogic": "The wheel fitting the calendar gap shows bicycle care working around a busy week.",
+      "headline": "Make a little room for bicycle care",
+      "callToAction": "Contact the workshop.",
+      "visualDirection": "An abstract calendar of folded paper and a circular wheel shadow, quiet upper copy area.",
+      "evidence": [
+        {
+          "id": "fact-0",
+          "quote": "We offer bicycle servicing and brake adjustments."
+        }
+      ],
+      "supportingLine": "Bicycle servicing and brake adjustments."
+    }
+  ],
+  "recommendations": [
+    {
+      "conceptIndex": 0,
+      "reason": "Connects the reviewed servicing offer with weekday commuters."
+    },
+    {
+      "conceptIndex": 1,
+      "reason": "Makes the reviewed brake adjustment service easy to recognise."
+    },
+    {
+      "conceptIndex": 2,
+      "reason": "Shows the broader servicing offer in a contrasting editorial layout."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+import assert from 'node:assert/strict';
+import {prepareUrlCampaign} from '../src/lib/businessUrlCampaignPipeline.mjs';
+import {createMarketingDocument} from '../src/lib/businessMarketingDocument.mjs';
+import {writingContext} from '../src/lib/growthrovaWriting.mjs';
+import {applyConceptDirection,applyImageConceptCopy} from '../src/lib/growthrovaCreativePlans.mjs';
+
+const doc=createMarketingDocument(prepareUrlCampaign({source_url:'https://example.org/',observations:{title:'Fictional Harbour Plumbing',meta_description:'Plumbing enquiries for local homes.'}}));
+doc.posts[0]={...doc.posts[0],supportingLine:'Keep this existing proposition.',status:'copy_reviewed'};
+const concept={id:'a'.repeat(32)+'-1',parentConceptId:'',buyerMotivation:'Discuss a leaking pipe',headline:'A leak needs attention',supportingLine:'Plumbing enquiries for local homes.',callToAction:'Enquire about plumbing',visualDirection:'Illustrative pipe with purposeful space for the headline and supporting words.',evidence:[{id:'brief-offer',quote:'Plumbing enquiries for local homes.'}]};
+const plan={state:'proposed',creativePlan:{mode:'initial'},concepts:[concept],sourceContext:writingContext(doc),brandKit:doc.brandKit??null};
+const target=doc.creatives.find(c=>c.format==='image_ad');
+const original=structuredClone(doc);
+const next=applyConceptDirection(doc,plan,concept.id,target.id,concept,1);
+assert.equal(next.posts[0].supportingLine,concept.supportingLine,'Reviewed concept words must reach saved advert input');
+assert.equal(next.posts[0].status,'draft');
+assert.equal(next.posts[0].copyDraft,original.posts[0].copyDraft);
+assert.deepEqual(next.posts.slice(1),original.posts.slice(1));
+assert.deepEqual(doc,original);
+assert.deepEqual(applyConceptDirection(next,plan,concept.id,target.id,concept,1),next);
+const cleared=applyConceptDirection(next,plan,concept.id,target.id,{...concept,supportingLine:''},1);
+assert.equal(cleared.posts[0].supportingLine,'','Explicitly clearing proposed words must work');
+const {supportingLine,...legacy}=concept;
+const legacyPlan={...plan,concepts:[legacy]};
+assert.equal(applyConceptDirection(doc,legacyPlan,legacy.id,target.id,legacy,1).posts[0].supportingLine,doc.posts[0].supportingLine,'Old plans do not silently clear saved copy');
+assert.throws(()=>applyConceptDirection(doc,plan,concept.id,target.id,{...concept,supportingLine:'x'.repeat(181)},1),/writing/i);
+const candidate={state:'proposed',origin:'generated',sha256:'c'.repeat(64),day:1,conceptId:concept.id,
+  conceptBinding:{concept,sourceContext:plan.sourceContext,brandKit:plan.brandKit}};
+const backgroundCopy=applyImageConceptCopy(doc,candidate);
+assert.equal(backgroundCopy.posts[0].supportingLine,concept.supportingLine,'Background copy comparison must apply the same structured words');
+assert.equal(backgroundCopy.posts[0].copyDraft,doc.posts[0].copyDraft);

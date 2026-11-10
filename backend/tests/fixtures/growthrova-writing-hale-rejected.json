@@ -1,0 +1,180 @@
+{
+  "provenance": "Actual controller Hale inference on 1 November 2026. Independent writing review REJECTED; not owner approval or publishable example. Saved sample/material only, no session, credentials or ledger.",
+  "sample": {
+    "posts": [
+      {
+        "angle": "Fitness, spa and dining in Cheshire",
+        "callToAction": "Visit the official Hale membership page to enquire about membership and current options.",
+        "caption": "Explore Hale Country Club & Spa in Cheshire, where the website lists fitness facilities, spa treatments and dining. If all three feature in what you\u2019re looking for, take a closer look as you consider your next membership.",
+        "evidence": [
+          {
+            "id": "fact-0",
+            "quote": "Hale Country Club & Spa is in Cheshire. Its website lists fitness facilities, spa treatments and dining."
+          },
+          {
+            "id": "brief-callToAction",
+            "quote": "Visit the official Hale membership page to enquire about membership and current options."
+          }
+        ],
+        "hook": "Look beyond fitness when exploring your next club."
+      },
+      {
+        "angle": "Dining as part of the club conversation",
+        "callToAction": "Explore the dining details on Hale\u2019s official website, then visit its membership page to enquire about current options.",
+        "caption": "Dining deserves a place in your membership search, too. Hale Country Club & Spa describes its menu as inspired by flavours across Asia and South America, with plates designed for sharing. Explore its dining alongside the fitness and spa details when deciding what matters to you in a club.",
+        "evidence": [
+          {
+            "id": "fact-12",
+            "quote": "Hale describes its menu as inspired by flavours across Asia and South America, with plates designed for sharing."
+          },
+          {
+            "id": "fact-0",
+            "quote": "Hale Country Club & Spa is in Cheshire. Its website lists fitness facilities, spa treatments and dining."
+          },
+          {
+            "id": "brief-callToAction",
+            "quote": "Visit the official Hale membership page to enquire about membership and current options."
+          }
+        ],
+        "hook": "Put sharing plates on your club wish list."
+      },
+      {
+        "angle": "An informed membership enquiry",
+        "callToAction": "Visit the official Hale membership page and send an enquiry with your membership questions.",
+        "caption": "Whether fitness, spa treatments or dining leads your search, use your priorities to shape your enquiry at Hale Country Club & Spa. Review the club\u2019s website, then ask about current membership options and how they relate to the facilities and experiences that interest you.",
+        "evidence": [
+          {
+            "id": "fact-0",
+            "quote": "Hale Country Club & Spa is in Cheshire. Its website lists fitness facilities, spa treatments and dining."
+          },
+          {
+            "id": "brief-offer",
+            "quote": "Explore Hale Country Club & Spa membership, fitness, spa and dining as described on its website. No discount, price or availability claim."
+          },
+          {
+            "id": "brief-callToAction",
+            "quote": "Visit the official Hale membership page to enquire about membership and current options."
+          }
+        ],
+        "hook": "Start your membership enquiry with what matters to you."
+      }
+    ],
+    "reel": {
+      "callToAction": "Visit the official Hale membership page to make your enquiry.",
+      "caption": "Fitness, spa treatments and dining: explore the combination listed on Hale Country Club & Spa\u2019s website. Start with what interests you, then enquire about current membership options.",
+      "evidence": [
+        {
+          "id": "fact-0",
+          "quote": "Hale Country Club & Spa is in Cheshire. Its website lists fitness facilities, spa treatments and dining."
+        },
+        {
+          "id": "brief-callToAction",
+          "quote": "Visit the official Hale membership page to enquire about membership and current options."
+        },
+        {
+          "id": "brief-constraints",
+          "quote": "INTERNAL PRODUCT TEST ONLY; no Hale owner approval. Use the public brand name Hale Country Club & Spa without the internal test suffix. No invented prices, offers, testimonials, health outcomes or availability. Exclude seasonal wording. No publishing or media rights inferred."
+        }
+      ],
+      "hook": "Three things to explore before your next club enquiry.",
+      "shots": [
+        {
+          "onScreen": "Hale Country Club & Spa\nCheshire",
+          "seconds": 7,
+          "visual": "Create a simple text opening on a neutral background. Use the public brand name as plain typography, without inventing a logo.",
+          "voiceover": "Considering a club in Cheshire? Explore Hale Country Club & Spa."
+        },
+        {
+          "onScreen": "Explore fitness",
+          "seconds": 7,
+          "visual": "If authorised, capture genuine footage of the club\u2019s fitness facilities. Keep people out of frame unless separately authorised.",
+          "voiceover": "Start with the fitness facilities listed on the club\u2019s website."
+        },
+        {
+          "onScreen": "Explore spa treatments and dining",
+          "seconds": 7,
+          "visual": "If authorised, capture genuine footage of the club\u2019s spa setting, followed by its dining space. Do not stage treatments or imply membership inclusions.",
+          "voiceover": "Then explore spa treatments and dining, alongside what matters to you."
+        },
+        {
+          "onScreen": "Explore membership\nEnquire via Hale\u2019s official membership page",
+          "seconds": 7,
+          "visual": "End on a neutral text card. Do not add prices, offers, availability statements or a fabricated website interface.",
+          "voiceover": "Visit Hale\u2019s official membership page to enquire about current options."
+        }
+      ]
+    }
+  },
+  "material": {
+    "audience": {
+      "status": "owner_planning_input",
+      "value": "Internal test planning assumption: adults in Cheshire considering a club membership that combines fitness, relaxation and dining. This audience is not owner-verified."
+    },
+    "business": "Hale Country Club \u2014 internal test",
+    "constraints": "INTERNAL PRODUCT TEST ONLY; no Hale owner approval. Use the public brand name Hale Country Club & Spa without the internal test suffix. No invented prices, offers, testimonials, health outcomes or availability. Exclude seasonal wording. No publishing or media rights inferred.",
+    "evidence": [
+      {
+        "id": "fact-0",
+        "quote": "Hale Country Club & Spa is in Cheshire. Its website lists fitness facilities, spa treatments and dining.",
+        "sourceUrl": "https://www.halecountryclub.co.uk/",
+        "status": "owner_correction"
+      },
+      {
+        "id": "fact-12",
+        "quote": "Hale describes its menu as inspired by flavours across Asia and South America, with plates designed for sharing.",
+        "sourceUrl": "https://www.halecountryclub.co.uk/",
+        "status": "owner_correction"
+      },
+      {
+        "id": "brief-offer",
+        "quote": "Explore Hale Country Club & Spa membership, fitness, spa and dining as described on its website. No discount, price or availability claim.",
+        "sourceUrl": "",
+        "status": "owner_input"
+      },
+      {
+        "id": "brief-positioning",
+        "quote": "Communicate the combination of fitness, spa and dining in Cheshire, using only the reviewed website details. Do not claim superiority or health outcomes.",
+        "sourceUrl": "",
+        "status": "owner_input"
+      },
+      {
+        "id": "brief-callToAction",
+        "quote": "Visit the official Hale membership page to enquire about membership and current options.",
+        "sourceUrl": "",
+        "status": "owner_input"
+      },
+      {
+        "id": "brief-constraints",
+        "quote": "INTERNAL PRODUCT TEST ONLY; no Hale owner approval. Use the public brand name Hale Country Club & Spa without the internal test suffix. No invented prices, offers, testimonials, health outcomes or availability. Exclude seasonal wording. No publishing or media rights inferred.",
+        "sourceUrl": "",
+        "status": "owner_input"
+      },
+      {
+        "freshness": "unknown; seasonal and time-limited claims held",
+        "id": "research-proof",
+        "quote": "Our Fuzen restaurant brings together influences from across Asia and South America, with vibrant plates designed for sharing and enjoying.",
+        "sourceUrl": "https://www.halecountryclub.co.uk/dine",
+        "status": "website_claim_unconfirmed"
+      },
+      {
+        "freshness": "unknown; seasonal and time-limited claims held",
+        "id": "research-education",
+        "quote": "We offer two core types of membership to suit a variety of tastes and you can find an overview of these below. Viewings of the Club are by advance appointment only, and will be arranged as part of your enquiry.",
+        "sourceUrl": "https://www.halecountryclub.co.uk/membership",
+        "status": "website_claim_unconfirmed"
+      },
+      {
+        "freshness": "unknown; seasonal and time-limited claims held",
+        "id": "research-decision",
+        "quote": "Take a journey through our Club, with unlimited access to the best-in-class gym and fitness equipment, innovative group exercise classes, a full-service Spa and additional facilities to refocus and reset.",
+        "sourceUrl": "https://www.halecountryclub.co.uk/",
+        "status": "website_claim_unconfirmed"
+      }
+    ],
+    "goal": {
+      "status": "owner_planning_input",
+      "value": "enquiries"
+    },
+    "website": "https://www.halecountryclub.co.uk/"
+  }
+}

@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {build} from 'esbuild';
+import {createRequire} from 'node:module';
+import React from 'react';
+const require=createRequire(import.meta.url);
+const bytes=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aHioAAAAASUVORK5CYII=','base64');
+const hash=Buffer.from(await crypto.subtle.digest('SHA-256',bytes)).toString('hex');
+const candidate={operationId:'a'.repeat(32),day:1,revision:1,origin:'generated',state:'held',sha256:hash,issues:['low_visual_detail']};
+const bundle=await build({entryPoints:['src/GrowthrovaImageCandidates.jsx'],bundle:true,write:false,format:'cjs',platform:'node',jsx:'automatic',external:['react','react/jsx-runtime'],logLevel:'silent'});
+let index=0,calls=0;
+const hooks={...React,useState:initial=>[index++===0?{available:false,candidates:[candidate]}:typeof initial==='function'?initial():initial,()=>{}],useEffect:()=>{},useRef:value=>({current:value})};
+const module={exports:{}};
+new Function('require','module','exports',bundle.outputFiles[0].text)(name=>name==='react'?hooks:require(name),module,module.exports);
+const tree=module.exports.default({api:async(path,options)=>{calls++;assert.equal(path,'/images/'+candidate.operationId+'/original');assert.equal(options.responseType,'blob');return new Blob([bytes],{type:'image/png'});},url:'/images',record:{revision:1,document:{posts:[{day:1}],creatives:[]}}});
+function flatten(node){return !node||typeof node!=='object'?[]:[node,...React.Children.toArray(node.props?.children).flatMap(flatten)];}
+const nodes=flatten(tree);
+const inspect=nodes.find(n=>n.type==='button'&&n.props.children==='Inspect generated background');
+assert.ok(inspect,'Completed held pixels must remain inspectable without a regeneration');
+assert.equal(nodes.some(n=>n.type==='button'&&n.props.children==='Compose branded static draft'),false,'Held images cannot be composed');
+await inspect.props.onClick();
+assert.equal(calls,1,'Held inspection uses original bytes, never provider inference');

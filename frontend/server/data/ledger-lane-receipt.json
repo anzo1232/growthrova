@@ -1,0 +1,850 @@
+{
+  "generatedThrough": "Growthrova real authenticated saved-campaign backend",
+  "model": "gemini-3-pro-image",
+  "date": "2026-11-04",
+  "workflow": "Business research where available; assistant supplied saved copy, brand palette and photographic art direction; real backend complete_advert generation; original hash verification and assistant pixel review. This does not establish a fully autonomous URL-to-ad workflow.",
+  "selectedAdverts": [
+    {
+      "business": "Ledger Lane",
+      "campaignId": "8c9cf54e5728446ca7706e9b813db893",
+      "operationId": "0fcaf9b6972c4e4f9db536b2ca923461",
+      "parentOperationId": "ee2dd30274b54cd18ee81da87c072261",
+      "model": "gemini-3-pro-image",
+      "fileName": "ledger-lane-photographic-v5.jpg",
+      "sha256": "f26f2322940c9d8c6430628a5dc495aabd47b32d9d93ad2d65caa492ecb4f317",
+      "reservationMicrousd": 248206,
+      "sourceCopy": {
+        "callToAction": "Book a consultation.",
+        "channel": "Instagram",
+        "copyDraft": "Less paperwork. More headspace. Ledger Lane is a fictional bookkeeping business offering bookkeeping for small businesses. Book a consultation.",
+        "day": 1,
+        "destinationUrl": "https://example.org/",
+        "format": "Image advert",
+        "graphicText": "Less paperwork. More headspace.",
+        "objective": "awareness",
+        "published": false,
+        "scheduled": false,
+        "status": "draft",
+        "supportingLine": "Bookkeeping for small businesses.",
+        "theme": "Showcase complete advert"
+      },
+      "pixelReview": {
+        "reviewId": "7c74bdf68ce94007bdad1eb2e26d3a25",
+        "expectedRevision": 1,
+        "expectedReviewVersion": 1,
+        "sha256": "f26f2322940c9d8c6430628a5dc495aabd47b32d9d93ad2d65caa492ecb4f317",
+        "checks": {
+          "visual": "checked",
+          "factual": "not_reviewed",
+          "brand": "checked",
+          "commercial": "not_reviewed",
+          "legibility": "checked",
+          "crop": "checked",
+          "cta": "checked",
+          "wording": "checked"
+        },
+        "note": "Assistant pixel review of downloaded original: business name, exact saved headline, supporting line and full CTA visibly present and readable; photographic treatment, safe margins, no layout guides or blank logo placeholder. This is concept artwork, not a verified photograph of the actual premises or exact product, and not owner approval. Brand check covers supplied name and palette, not a verified original logo. OCR omissions were checked against actual pixels."
+      },
+      "reviewResponse": {
+        "advertCopy": {
+          "businessName": "Ledger Lane",
+          "callToAction": "Book a consultation.",
+          "headline": "Less paperwork. More headspace.",
+          "supportingLine": "Bookkeeping for small businesses.",
+          "wordingReview": "pending_pixel_review"
+        },
+        "alternativeType": "new_illustration",
+        "canPublish": false,
+        "canSpend": false,
+        "compositionHeld": false,
+        "day": 1,
+        "exactLogoIncluded": false,
+        "height": 2400,
+        "imageSize": "2K",
+        "independentReview": "pending",
+        "issues": [
+          "Complete generated advert draft. Inspect every generated word against the saved requested wording, brand, claims, layout and CTA. Exact uploaded logo is not included. Independent visual and commercial review pending."
+        ],
+        "material": {
+          "audience": {
+            "status": "owner_planning_input",
+            "value": "Small business owners seeking bookkeeping support."
+          },
+          "business": "Ledger Lane",
+          "constraints": "Illustrative showcase advert only. No publication, invented prices, offers, awards, testimonials, customer results or exact product claims. Images are generated concepts, not genuine business photography.",
+          "evidence": [
+            {
+              "id": "fact-0",
+              "quote": "Ledger Lane is a fictional bookkeeping business for small businesses.",
+              "sourceUrl": "https://example.org/",
+              "status": "owner_reviewed_observation"
+            },
+            {
+              "id": "brief-offer",
+              "quote": "Ledger Lane is a fictional bookkeeping business offering bookkeeping for small businesses.",
+              "sourceUrl": "",
+              "status": "owner_input"
+            },
+            {
+              "id": "brief-callToAction",
+              "quote": "Book a consultation.",
+              "sourceUrl": "",
+              "status": "owner_input"
+            },
+            {
+              "id": "brief-constraints",
+              "quote": "Illustrative showcase advert only. No publication, invented prices, offers, awards, testimonials, customer results or exact product claims. Images are generated concepts, not genuine business photography.",
+              "sourceUrl": "",
+              "status": "owner_input"
+            }
+          ],
+          "goal": {
+            "status": "owner_planning_input",
+            "value": "enquiries"
+          },
+          "website": "https://example.org/"
+        },
+        "mimeType": "image/jpeg",
+        "model": "gemini-3-pro-image",
+        "observations": [
+          {
+            "checks": {
+              "brand": "not_reviewed",
+              "commercial": "not_reviewed",
+              "crop": "not_reviewed",
+              "cta": "not_reviewed",
+              "factual": "not_reviewed",
+              "legibility": "not_reviewed",
+              "visual": "not_reviewed",
+              "wording": "checked"
+            },
+            "contextHash": "7c0d4bae44804e7fa3de0950fa37b828eef479a0676d0abaa435b26cf154f337",
+            "current": true,
+            "independentApproval": false,
+            "note": "Automated local OCR screen only, not independent visual or owner approval. Missing expected text fields: none. Exact typography, visual style, factual accuracy and full frame still require pixel review.",
+            "outcome": "observed",
+            "recordedAt": 1793803862,
+            "reviewId": "ccaae790a4494bb7a18579af30de19d8",
+            "reviewerId": "3ab7f746-c883-440c-b6b0-6df5fd1e02cc",
+            "reviewerRole": "owner_observation",
+            "revision": 1,
+            "sha256": "f26f2322940c9d8c6430628a5dc495aabd47b32d9d93ad2d65caa492ecb4f317",
+            "version": 1
+          },
+          {
+            "checks": {
+              "brand": "checked",
+              "commercial": "not_reviewed",
+              "crop": "checked",
+              "cta": "checked",
+              "factual": "not_reviewed",
+              "legibility": "checked",
+              "visual": "checked",
+              "wording": "checked"
+            },
+            "contextHash": "7c0d4bae44804e7fa3de0950fa37b828eef479a0676d0abaa435b26cf154f337",
+            "current": true,
+            "independentApproval": false,
+            "note": "Assistant pixel review of downloaded original: business name, exact saved headline, supporting line and full CTA visibly present and readable; photographic treatment, safe margins, no layout guides or blank logo placeholder. This is concept artwork, not a verified photograph of the actual premises or exact product, and not owner approval. Brand check covers supplied name and palette, not a verified original logo. OCR omissions were checked against actual pixels.",
+            "outcome": "observed",
+            "recordedAt": 1793804028,
+            "reviewId": "7c74bdf68ce94007bdad1eb2e26d3a25",
+            "reviewerId": "3ab7f746-c883-440c-b6b0-6df5fd1e02cc",
+            "reviewerRole": "owner_observation",
+            "revision": 1,
+            "sha256": "f26f2322940c9d8c6430628a5dc495aabd47b32d9d93ad2d65caa492ecb4f317",
+            "version": 2
+          }
+        ],
+        "operationId": "0fcaf9b6972c4e4f9db536b2ca923461",
+        "origin": "generated",
+        "outcomeCheckAfter": 1793803965.427966,
+        "parentOperationId": "ee2dd30274b54cd18ee81da87c072261",
+        "parentSha256": "c72e3572be64b1a277918efc8a322f823d4a830ceb0343ff83b77fb6ea34c4d9",
+        "quality": "standard",
+        "renderingMode": "complete_advert",
+        "requestedAt": 1793803830.427966,
+        "requestedFrame": "portrait_2k",
+        "reservedMicrousd": 248206,
+        "reviewVersion": 2,
+        "revision": 1,
+        "sha256": "f26f2322940c9d8c6430628a5dc495aabd47b32d9d93ad2d65caa492ecb4f317",
+        "size": "1792x2400",
+        "sourceChoiceVersion": 1,
+        "sourceContext": {
+          "brandKit": {
+            "font_style": "classic",
+            "name": "Ledger Lane",
+            "primary_color": "#103e2e",
+            "secondary_color": "#f5f0e6"
+          },
+          "goal": "enquiries",
+          "post": {
+            "callToAction": "Book a consultation.",
+            "channel": "Instagram",
+            "copyDraft": "Less paperwork. More headspace. Ledger Lane is a fictional bookkeeping business offering bookkeeping for small businesses. Book a consultation.",
+            "day": 1,
+            "destinationUrl": "https://example.org/",
+            "format": "Image advert",
+            "graphicText": "Less paperwork. More headspace.",
+            "objective": "awareness",
+            "published": false,
+            "scheduled": false,
+            "status": "draft",
+            "supportingLine": "Bookkeeping for small businesses.",
+            "theme": "Showcase complete advert"
+          },
+          "sourceUrl": "https://example.org/"
+        },
+        "sourceHash": "7803c93b906c9bf65fa046a8b5dc25b7539ce3073c36e5250714af05a2196322",
+        "sourceRoute": "create",
+        "state": "proposed",
+        "technicalReview": {
+          "claimsVerified": false,
+          "flags": [],
+          "limitations": "Technical statistics cannot judge realism, marketing quality, brand accuracy or conversion.",
+          "ownerApproved": false,
+          "qualityStatus": "awaiting_visual_and_brand_review",
+          "resolution": [
+            1792,
+            2400
+          ]
+        },
+        "visualBrief": "PHOTOREALISTIC BOOKKEEPING ADVERT, not a drawing, painting, illustration, cartoon or flat rendering. Premium studio product PHOTOGRAPHY: three real forest-green cloth-bound ledgers with visible fabric grain, copper pen with actual specular light, small controlled scatter of real paper receipts on warm ivory textured surface, strong natural side shadows. Use a slightly elevated 50mm photographic view with believable material detail. Exact dark-green headline large in upper third, Ledger Lane business name and service line distinctly readable, visually refined ivory consultation CTA near bottom with plenty of margin. Place ledgers lower right and receipts lower left. Exact saved copy only. A finished premium advert, not a background. Finished ad only. No percentages, guides, annotations, blank logo panel or unused header block. Show business name as type. Include the exact CTA in a readable contrasting bottom area.",
+        "width": 1792
+      },
+      "originalBytesVerified": true
+    },
+    {
+      "business": "Encore VIP",
+      "campaignId": "6debdc85aa194de6b2f120100547f9b5",
+      "operationId": "c0b54871f34f4ced83ccff23a11b5473",
+      "parentOperationId": "93939cf5bbf74810939abf06f57180e1",
+      "model": "gemini-3-pro-image",
+      "fileName": "encore-photographic-v5.jpg",
+      "sha256": "2056c481b788ec0cf5ce9c0ce104e357bc2b5b05ef80a083802cb6784b0aaed1",
+      "reservationMicrousd": 248826,
+      "sourceCopy": {
+        "callToAction": "Speak to your concierge.",
+        "channel": "Instagram",
+        "copyDraft": "The extraordinary. Arranged. Encore VIP offers bespoke experiences, luxury travel, private aviation and exclusive events. Speak to your concierge.",
+        "day": 1,
+        "destinationUrl": "https://www.encorevip.uk/",
+        "format": "Image advert",
+        "graphicText": "The extraordinary. Arranged.",
+        "objective": "awareness",
+        "published": false,
+        "scheduled": false,
+        "status": "draft",
+        "supportingLine": "Bespoke travel. Private experiences.",
+        "theme": "Showcase complete advert"
+      },
+      "pixelReview": {
+        "reviewId": "a4c01208a89b4af4901acfd21949c116",
+        "expectedRevision": 1,
+        "expectedReviewVersion": 1,
+        "sha256": "2056c481b788ec0cf5ce9c0ce104e357bc2b5b05ef80a083802cb6784b0aaed1",
+        "checks": {
+          "visual": "checked",
+          "factual": "not_reviewed",
+          "brand": "checked",
+          "commercial": "not_reviewed",
+          "legibility": "checked",
+          "crop": "checked",
+          "cta": "checked",
+          "wording": "checked"
+        },
+        "note": "Assistant pixel review of downloaded original: business name, exact saved headline, supporting line and full CTA visibly present and readable; photographic treatment, safe margins, no layout guides or blank logo placeholder. This is concept artwork, not a verified photograph of the actual premises or exact product, and not owner approval. Brand check covers supplied name and palette, not a verified original logo. OCR omissions were checked against actual pixels."
+      },
+      "reviewResponse": {
+        "advertCopy": {
+          "businessName": "Encore VIP",
+          "callToAction": "Speak to your concierge.",
+          "headline": "The extraordinary. Arranged.",
+          "supportingLine": "Bespoke travel. Private experiences.",
+          "wordingReview": "pending_pixel_review"
+        },
+        "alternativeType": "new_illustration",
+        "canPublish": false,
+        "canSpend": false,
+        "compositionHeld": false,
+        "day": 1,
+        "exactLogoIncluded": false,
+        "height": 2400,
+        "imageSize": "2K",
+        "independentReview": "pending",
+        "issues": [
+          "Complete generated advert draft. Inspect every generated word against the saved requested wording, brand, claims, layout and CTA. Exact uploaded logo is not included. Independent visual and commercial review pending."
+        ],
+        "material": {
+          "audience": {
+            "status": "owner_planning_input",
+            "value": "People seeking personalised luxury travel and private experiences."
+          },
+          "business": "Encore VIP",
+          "constraints": "Illustrative showcase advert only. No publication, invented prices, offers, awards, testimonials, customer results or exact product claims. Images are generated concepts, not genuine business photography.",
+          "evidence": [
+            {
+              "id": "fact-0",
+              "quote": "Bespoke experiences. Private aviation. Exclusive events.",
+              "sourceUrl": "https://www.encorevip.uk/",
+              "status": "owner_reviewed_observation"
+            },
+            {
+              "id": "fact-1",
+              "quote": "Bespoke experiences for those who demand the extraordinary. The extraordinary, arranged.",
+              "sourceUrl": "https://www.encorevip.uk/",
+              "status": "owner_reviewed_observation"
+            },
+            {
+              "id": "brief-offer",
+              "quote": "Encore VIP offers bespoke experiences, luxury travel, private aviation and exclusive events.",
+              "sourceUrl": "",
+              "status": "owner_input"
+            },
+            {
+              "id": "brief-callToAction",
+              "quote": "Speak to your concierge.",
+              "sourceUrl": "",
+              "status": "owner_input"
+            },
+            {
+              "id": "brief-constraints",
+              "quote": "Illustrative showcase advert only. No publication, invented prices, offers, awards, testimonials, customer results or exact product claims. Images are generated concepts, not genuine business photography.",
+              "sourceUrl": "",
+              "status": "owner_input"
+            }
+          ],
+          "goal": {
+            "status": "owner_planning_input",
+            "value": "enquiries"
+          },
+          "website": "https://www.encorevip.uk/"
+        },
+        "mimeType": "image/jpeg",
+        "model": "gemini-3-pro-image",
+        "observations": [
+          {
+            "checks": {
+              "brand": "not_reviewed",
+              "commercial": "not_reviewed",
+              "crop": "not_reviewed",
+              "cta": "not_reviewed",
+              "factual": "not_reviewed",
+              "legibility": "not_reviewed",
+              "visual": "not_reviewed",
+              "wording": "needs_changes"
+            },
+            "contextHash": "e731836c33208a4a2fc9c74a3c3a0afc4d07e391c78f8d0f97e76f8b0b81b09d",
+            "current": true,
+            "independentApproval": false,
+            "note": "Automated local OCR screen only, not independent visual or owner approval. Missing expected text fields: callToAction. Exact typography, visual style, factual accuracy and full frame still require pixel review.",
+            "outcome": "needs_changes",
+            "recordedAt": 1793803623,
+            "reviewId": "7739a1ebbc1045708d265b13507bb555",
+            "reviewerId": "3ab7f746-c883-440c-b6b0-6df5fd1e02cc",
+            "reviewerRole": "owner_observation",
+            "revision": 1,
+            "sha256": "2056c481b788ec0cf5ce9c0ce104e357bc2b5b05ef80a083802cb6784b0aaed1",
+            "version": 1
+          },
+          {
+            "checks": {
+              "brand": "checked",
+              "commercial": "not_reviewed",
+              "crop": "checked",
+              "cta": "checked",
+              "factual": "not_reviewed",
+              "legibility": "checked",
+              "visual": "checked",
+              "wording": "checked"
+            },
+            "contextHash": "e731836c33208a4a2fc9c74a3c3a0afc4d07e391c78f8d0f97e76f8b0b81b09d",
+            "current": true,
+            "independentApproval": false,
+            "note": "Assistant pixel review of downloaded original: business name, exact saved headline, supporting line and full CTA visibly present and readable; photographic treatment, safe margins, no layout guides or blank logo placeholder. This is concept artwork, not a verified photograph of the actual premises or exact product, and not owner approval. Brand check covers supplied name and palette, not a verified original logo. OCR omissions were checked against actual pixels.",
+            "outcome": "observed",
+            "recordedAt": 1793804029,
+            "reviewId": "a4c01208a89b4af4901acfd21949c116",
+            "reviewerId": "3ab7f746-c883-440c-b6b0-6df5fd1e02cc",
+            "reviewerRole": "owner_observation",
+            "revision": 1,
+            "sha256": "2056c481b788ec0cf5ce9c0ce104e357bc2b5b05ef80a083802cb6784b0aaed1",
+            "version": 2
+          }
+        ],
+        "operationId": "c0b54871f34f4ced83ccff23a11b5473",
+        "origin": "generated",
+        "outcomeCheckAfter": 1793803726.5702229,
+        "parentOperationId": "93939cf5bbf74810939abf06f57180e1",
+        "parentSha256": "02fa2a9ae34e4de8966a059bfd4cde68d88097cfaa223bd848a23e60d5406cd2",
+        "quality": "standard",
+        "renderingMode": "complete_advert",
+        "requestedAt": 1793803591.5702229,
+        "requestedFrame": "portrait_2k",
+        "reservedMicrousd": 248826,
+        "reviewVersion": 2,
+        "revision": 1,
+        "sha256": "2056c481b788ec0cf5ce9c0ce104e357bc2b5b05ef80a083802cb6784b0aaed1",
+        "size": "1792x2400",
+        "sourceChoiceVersion": 1,
+        "sourceContext": {
+          "brandKit": {
+            "font_style": "classic",
+            "name": "Encore VIP",
+            "primary_color": "#101c2a",
+            "secondary_color": "#e6d6ba"
+          },
+          "goal": "enquiries",
+          "post": {
+            "callToAction": "Speak to your concierge.",
+            "channel": "Instagram",
+            "copyDraft": "The extraordinary. Arranged. Encore VIP offers bespoke experiences, luxury travel, private aviation and exclusive events. Speak to your concierge.",
+            "day": 1,
+            "destinationUrl": "https://www.encorevip.uk/",
+            "format": "Image advert",
+            "graphicText": "The extraordinary. Arranged.",
+            "objective": "awareness",
+            "published": false,
+            "scheduled": false,
+            "status": "draft",
+            "supportingLine": "Bespoke travel. Private experiences.",
+            "theme": "Showcase complete advert"
+          },
+          "sourceUrl": "https://www.encorevip.uk/"
+        },
+        "sourceHash": "8b2d4da90fa65456a036bb8e997b2232df47b20db18f3f254e8406ec06f082b8",
+        "sourceRoute": "create",
+        "state": "proposed",
+        "technicalReview": {
+          "claimsVerified": false,
+          "flags": [],
+          "limitations": "Technical statistics cannot judge realism, marketing quality, brand accuracy or conversion.",
+          "ownerApproved": false,
+          "qualityStatus": "awaiting_visual_and_brand_review",
+          "resolution": [
+            1792,
+            2400
+          ]
+        },
+        "visualBrief": "PHOTOREALISTIC LUXURY TRAVEL ADVERT. Use polished commercial PHOTOGRAPHY, not illustration, painting, vector shapes or cartoon. Physically realistic blue-hour private yacht deck overlooking an unnamed Italian lakeside villa, natural stone texture, teak grain, warm champagne lamplight and rich midnight water reflections. Rich depth, 50mm editorial travel lens. The image must feel photographed. Dark clean sky behind headline; spectacular photographic scene across middle. Brand text Encore VIP must be present and readable near top, separated from the headline. Include all exact saved headline, service line and concierge CTA. Quiet refined ivory serif typography, strong hierarchy, generous safe margins. Keep CTA fully visible. A high-end photographic campaign with exact copy, not a travel illustration. Finished ad only. No percentages, guides, annotations, blank logo panel or unused header block. Show business name as type. Include the exact CTA in a readable contrasting bottom area.",
+        "width": 1792
+      },
+      "originalBytesVerified": true
+    },
+    {
+      "business": "Dishoom",
+      "campaignId": "05c7febf79b34e65bcc6cba560f29919",
+      "operationId": "6226292e01e44f93bdf94936a441a854",
+      "parentOperationId": "c1c89801b8b142689b14a1c83dddba9f",
+      "model": "gemini-3-pro-image",
+      "fileName": "dishoom-photographic-v5.jpg",
+      "sha256": "1e3f0a1b92b1fe107189393b57aaadf36e9aea375cb773362c35bf42ec568eec",
+      "reservationMicrousd": 248560,
+      "sourceCopy": {
+        "callToAction": "Explore the menu.",
+        "channel": "Instagram",
+        "copyDraft": "From Bombay, with love. Dishoom cafes pay homage to the food of Bombay, serving Bombay comfort food and drinks. Explore the menu.",
+        "day": 1,
+        "destinationUrl": "https://www.dishoom.com/",
+        "format": "Image advert",
+        "graphicText": "From Bombay, with love.",
+        "objective": "awareness",
+        "published": false,
+        "scheduled": false,
+        "status": "draft",
+        "supportingLine": "Bombay comfort food. All welcome.",
+        "theme": "Showcase complete advert"
+      },
+      "pixelReview": {
+        "reviewId": "9f29f556e5a74d3eadcfebf2fa95ed32",
+        "expectedRevision": 1,
+        "expectedReviewVersion": 0,
+        "sha256": "1e3f0a1b92b1fe107189393b57aaadf36e9aea375cb773362c35bf42ec568eec",
+        "checks": {
+          "visual": "checked",
+          "factual": "not_reviewed",
+          "brand": "checked",
+          "commercial": "not_reviewed",
+          "legibility": "checked",
+          "crop": "checked",
+          "cta": "checked",
+          "wording": "checked"
+        },
+        "note": "Assistant pixel review of downloaded original: business name, exact saved headline, supporting line and full CTA visibly present and readable; photographic treatment, safe margins, no layout guides or blank logo placeholder. This is concept artwork, not a verified photograph of the actual premises or exact product, and not owner approval. Brand check covers supplied name and palette, not a verified original logo. OCR omissions were checked against actual pixels."
+      },
+      "reviewResponse": {
+        "advertCopy": {
+          "businessName": "Dishoom",
+          "callToAction": "Explore the menu.",
+          "headline": "From Bombay, with love.",
+          "supportingLine": "Bombay comfort food. All welcome.",
+          "wordingReview": "pending_pixel_review"
+        },
+        "alternativeType": "new_illustration",
+        "canPublish": false,
+        "canSpend": false,
+        "compositionHeld": false,
+        "day": 1,
+        "exactLogoIncluded": false,
+        "height": 2400,
+        "imageSize": "2K",
+        "independentReview": "pending",
+        "issues": [
+          "Complete generated advert draft. Inspect every generated word against the saved requested wording, brand, claims, layout and CTA. Exact uploaded logo is not included. Independent visual and commercial review pending."
+        ],
+        "material": {
+          "audience": {
+            "status": "owner_planning_input",
+            "value": "People exploring a place for Bombay comfort food."
+          },
+          "business": "Dishoom",
+          "constraints": "Illustrative showcase advert only. No publication, invented prices, offers, awards, testimonials, customer results or exact product claims. Images are generated concepts, not genuine business photography.",
+          "evidence": [
+            {
+              "id": "fact-0",
+              "quote": "Dishoom caf\u00e9s pay homage to the food of Bombay.",
+              "sourceUrl": "https://www.dishoom.com/",
+              "status": "owner_reviewed_observation"
+            },
+            {
+              "id": "fact-1",
+              "quote": "At Dishoom, you\u2019ll find the food of all Bombay.",
+              "sourceUrl": "https://www.dishoom.com/",
+              "status": "owner_reviewed_observation"
+            },
+            {
+              "id": "brief-offer",
+              "quote": "Dishoom cafes pay homage to the food of Bombay, serving Bombay comfort food and drinks.",
+              "sourceUrl": "",
+              "status": "owner_input"
+            },
+            {
+              "id": "brief-callToAction",
+              "quote": "Explore the menu.",
+              "sourceUrl": "",
+              "status": "owner_input"
+            },
+            {
+              "id": "brief-constraints",
+              "quote": "Illustrative showcase advert only. No publication, invented prices, offers, awards, testimonials, customer results or exact product claims. Images are generated concepts, not genuine business photography.",
+              "sourceUrl": "",
+              "status": "owner_input"
+            }
+          ],
+          "goal": {
+            "status": "owner_planning_input",
+            "value": "bookings"
+          },
+          "website": "https://www.dishoom.com/"
+        },
+        "mimeType": "image/jpeg",
+        "model": "gemini-3-pro-image",
+        "observations": [
+          {
+            "checks": {
+              "brand": "checked",
+              "commercial": "not_reviewed",
+              "crop": "checked",
+              "cta": "checked",
+              "factual": "not_reviewed",
+              "legibility": "checked",
+              "visual": "checked",
+              "wording": "checked"
+            },
+            "contextHash": "e5d9efbbdf70504d8d661097cfb3d20e3d0a78fa2b3451dbc85352c72447e7c9",
+            "current": true,
+            "independentApproval": false,
+            "note": "Assistant pixel review of downloaded original: business name, exact saved headline, supporting line and full CTA visibly present and readable; photographic treatment, safe margins, no layout guides or blank logo placeholder. This is concept artwork, not a verified photograph of the actual premises or exact product, and not owner approval. Brand check covers supplied name and palette, not a verified original logo. OCR omissions were checked against actual pixels.",
+            "outcome": "observed",
+            "recordedAt": 1793804030,
+            "reviewId": "9f29f556e5a74d3eadcfebf2fa95ed32",
+            "reviewerId": "3ab7f746-c883-440c-b6b0-6df5fd1e02cc",
+            "reviewerRole": "owner_observation",
+            "revision": 1,
+            "sha256": "1e3f0a1b92b1fe107189393b57aaadf36e9aea375cb773362c35bf42ec568eec",
+            "version": 1
+          }
+        ],
+        "operationId": "6226292e01e44f93bdf94936a441a854",
+        "origin": "generated",
+        "outcomeCheckAfter": 1793803998.7833824,
+        "parentOperationId": "c1c89801b8b142689b14a1c83dddba9f",
+        "parentSha256": "35a0209a03bed6e829ce2b43a8789cc1c6582dec9852e9ce0b78b4a7634bd007",
+        "quality": "standard",
+        "renderingMode": "complete_advert",
+        "requestedAt": 1793803863.7833824,
+        "requestedFrame": "portrait_2k",
+        "reservedMicrousd": 248560,
+        "reviewVersion": 1,
+        "revision": 1,
+        "sha256": "1e3f0a1b92b1fe107189393b57aaadf36e9aea375cb773362c35bf42ec568eec",
+        "size": "1792x2400",
+        "sourceChoiceVersion": 1,
+        "sourceContext": {
+          "brandKit": {
+            "font_style": "classic",
+            "name": "Dishoom",
+            "primary_color": "#52302b",
+            "secondary_color": "#f2e4cd"
+          },
+          "goal": "bookings",
+          "post": {
+            "callToAction": "Explore the menu.",
+            "channel": "Instagram",
+            "copyDraft": "From Bombay, with love. Dishoom cafes pay homage to the food of Bombay, serving Bombay comfort food and drinks. Explore the menu.",
+            "day": 1,
+            "destinationUrl": "https://www.dishoom.com/",
+            "format": "Image advert",
+            "graphicText": "From Bombay, with love.",
+            "objective": "awareness",
+            "published": false,
+            "scheduled": false,
+            "status": "draft",
+            "supportingLine": "Bombay comfort food. All welcome.",
+            "theme": "Showcase complete advert"
+          },
+          "sourceUrl": "https://www.dishoom.com/"
+        },
+        "sourceHash": "d6edd699bdf81eead1c2bcc583f7280703ce3dd3481eef1d5286f7fb86326040",
+        "sourceRoute": "create",
+        "state": "proposed",
+        "technicalReview": {
+          "claimsVerified": false,
+          "flags": [],
+          "limitations": "Technical statistics cannot judge realism, marketing quality, brand accuracy or conversion.",
+          "ownerApproved": false,
+          "qualityStatus": "awaiting_visual_and_brand_review",
+          "resolution": [
+            1792,
+            2400
+          ]
+        },
+        "visualBrief": "PHOTOREALISTIC RESTAURANT ADVERT, not an illustration, painting, cartoon, flat vector image or drawing. Mandatory plain typographic business name DISHOOM, large and readable at the top within safe margins. Exact saved headline below it. Rich restaurant-editorial PHOTOGRAPHY in middle: authentic-looking bowl of dark slow-cooked lentils, smoky chargrilled chicken and warm naan on tactile ceramic and a dark wooden cafe table, one small glass of chai, real oil glints and natural food texture. Camera 85mm, shallow realistic depth, warm cinematic light, appetising restrained styling. Oxblood and ivory typography panels. Clear exact service line and Explore the menu CTA. Do not omit DISHOOM or substitute it with the slogan. Fictional scene for a concept campaign, not a claimed actual premises photo. Finished ad only. No percentages, guides, annotations, blank logo panel or unused header block. Show business name as type. Include the exact CTA in a readable contrasting bottom area.",
+        "width": 1792
+      },
+      "originalBytesVerified": true
+    },
+    {
+      "business": "Finisterre",
+      "campaignId": "a797a98f4a6d4a9ea8667bd0df7402e6",
+      "operationId": "12a891e0b30f4883a7128a663023c28d",
+      "parentOperationId": "13b50758c97d421495cb57d63bca15eb",
+      "model": "gemini-3-pro-image",
+      "fileName": "finisterre-photographic-v5.jpg",
+      "sha256": "12a1a3dcb1736e2ad633daae8ee45f3053fec707a7d4adf1130256ca3cdbf992",
+      "reservationMicrousd": 248834,
+      "sourceCopy": {
+        "callToAction": "Explore the collection.",
+        "channel": "Instagram",
+        "copyDraft": "Made for life where land ends. Finisterre offers outerwear, hardy knits and year-round adventure essentials, born from a love of the sea. Explore the collection.",
+        "day": 1,
+        "destinationUrl": "https://finisterre.com/",
+        "format": "Image advert",
+        "graphicText": "Made for life where land ends.",
+        "objective": "awareness",
+        "published": false,
+        "scheduled": false,
+        "status": "draft",
+        "supportingLine": "Outerwear. Hardy knits. Adventure essentials.",
+        "theme": "Showcase complete advert"
+      },
+      "pixelReview": {
+        "reviewId": "cd522756ecb844d2808a46866e422569",
+        "expectedRevision": 1,
+        "expectedReviewVersion": 1,
+        "sha256": "12a1a3dcb1736e2ad633daae8ee45f3053fec707a7d4adf1130256ca3cdbf992",
+        "checks": {
+          "visual": "checked",
+          "factual": "not_reviewed",
+          "brand": "checked",
+          "commercial": "not_reviewed",
+          "legibility": "checked",
+          "crop": "checked",
+          "cta": "checked",
+          "wording": "checked"
+        },
+        "note": "Assistant pixel review of downloaded original: business name, exact saved headline, supporting line and full CTA visibly present and readable; photographic treatment, safe margins, no layout guides or blank logo placeholder. This is concept artwork, not a verified photograph of the actual premises or exact product, and not owner approval. Brand check covers supplied name and palette, not a verified original logo. OCR omissions were checked against actual pixels."
+      },
+      "reviewResponse": {
+        "advertCopy": {
+          "businessName": "Finisterre",
+          "callToAction": "Explore the collection.",
+          "headline": "Made for life where land ends.",
+          "supportingLine": "Outerwear. Hardy knits. Adventure essentials.",
+          "wordingReview": "pending_pixel_review"
+        },
+        "alternativeType": "new_illustration",
+        "canPublish": false,
+        "canSpend": false,
+        "compositionHeld": false,
+        "day": 1,
+        "exactLogoIncluded": false,
+        "height": 2400,
+        "imageSize": "2K",
+        "independentReview": "pending",
+        "issues": [
+          "Complete generated advert draft. Inspect every generated word against the saved requested wording, brand, claims, layout and CTA. Exact uploaded logo is not included. Independent visual and commercial review pending."
+        ],
+        "material": {
+          "audience": {
+            "status": "owner_planning_input",
+            "value": "People interested in outdoor clothing and coastal adventures."
+          },
+          "business": "Finisterre",
+          "constraints": "Illustrative showcase advert only. No publication, invented prices, offers, awards, testimonials, customer results or exact product claims. Images are generated concepts, not genuine business photography.",
+          "evidence": [
+            {
+              "id": "fact-0",
+              "quote": "Discover consciously built outerwear, hardy knits and year-round adventure essentials, born from a love of the sea.",
+              "sourceUrl": "https://finisterre.com/",
+              "status": "owner_reviewed_observation"
+            },
+            {
+              "id": "fact-1",
+              "quote": "Made For Life Where Land Ends",
+              "sourceUrl": "https://finisterre.com/",
+              "status": "owner_reviewed_observation"
+            },
+            {
+              "id": "brief-offer",
+              "quote": "Finisterre offers outerwear, hardy knits and year-round adventure essentials, born from a love of the sea.",
+              "sourceUrl": "",
+              "status": "owner_input"
+            },
+            {
+              "id": "brief-callToAction",
+              "quote": "Explore the collection.",
+              "sourceUrl": "",
+              "status": "owner_input"
+            },
+            {
+              "id": "brief-constraints",
+              "quote": "Illustrative showcase advert only. No publication, invented prices, offers, awards, testimonials, customer results or exact product claims. Images are generated concepts, not genuine business photography.",
+              "sourceUrl": "",
+              "status": "owner_input"
+            }
+          ],
+          "goal": {
+            "status": "owner_planning_input",
+            "value": "awareness"
+          },
+          "website": "https://finisterre.com/"
+        },
+        "mimeType": "image/jpeg",
+        "model": "gemini-3-pro-image",
+        "observations": [
+          {
+            "checks": {
+              "brand": "needs_changes",
+              "commercial": "not_reviewed",
+              "crop": "not_reviewed",
+              "cta": "not_reviewed",
+              "factual": "not_reviewed",
+              "legibility": "not_reviewed",
+              "visual": "not_reviewed",
+              "wording": "needs_changes"
+            },
+            "contextHash": "fc474028eec52c4219dd8659d6e908323dac4f0f8dd0c02fe254ba49309f623e",
+            "current": true,
+            "independentApproval": false,
+            "note": "Automated local OCR screen only, not independent visual or owner approval. Missing expected text fields: businessName, headline, supportingLine. Exact typography, visual style, factual accuracy and full frame still require pixel review.",
+            "outcome": "needs_changes",
+            "recordedAt": 1793803966,
+            "reviewId": "a474a636f0764193b1c80cc5c2762ef2",
+            "reviewerId": "3ab7f746-c883-440c-b6b0-6df5fd1e02cc",
+            "reviewerRole": "owner_observation",
+            "revision": 1,
+            "sha256": "12a1a3dcb1736e2ad633daae8ee45f3053fec707a7d4adf1130256ca3cdbf992",
+            "version": 1
+          },
+          {
+            "checks": {
+              "brand": "checked",
+              "commercial": "not_reviewed",
+              "crop": "checked",
+              "cta": "checked",
+              "factual": "not_reviewed",
+              "legibility": "checked",
+              "visual": "checked",
+              "wording": "checked"
+            },
+            "contextHash": "fc474028eec52c4219dd8659d6e908323dac4f0f8dd0c02fe254ba49309f623e",
+            "current": true,
+            "independentApproval": false,
+            "note": "Assistant pixel review of downloaded original: business name, exact saved headline, supporting line and full CTA visibly present and readable; photographic treatment, safe margins, no layout guides or blank logo placeholder. This is concept artwork, not a verified photograph of the actual premises or exact product, and not owner approval. Brand check covers supplied name and palette, not a verified original logo. OCR omissions were checked against actual pixels.",
+            "outcome": "observed",
+            "recordedAt": 1793804031,
+            "reviewId": "cd522756ecb844d2808a46866e422569",
+            "reviewerId": "3ab7f746-c883-440c-b6b0-6df5fd1e02cc",
+            "reviewerRole": "owner_observation",
+            "revision": 1,
+            "sha256": "12a1a3dcb1736e2ad633daae8ee45f3053fec707a7d4adf1130256ca3cdbf992",
+            "version": 2
+          }
+        ],
+        "operationId": "12a891e0b30f4883a7128a663023c28d",
+        "origin": "generated",
+        "outcomeCheckAfter": 1793804070.1745846,
+        "parentOperationId": "13b50758c97d421495cb57d63bca15eb",
+        "parentSha256": "2c09b03c97b214aed3f80efc1a9530716bf4ed08ccba2950e9642d03ffc60f3f",
+        "quality": "standard",
+        "renderingMode": "complete_advert",
+        "requestedAt": 1793803935.1745846,
+        "requestedFrame": "portrait_2k",
+        "reservedMicrousd": 248834,
+        "reviewVersion": 2,
+        "revision": 1,
+        "sha256": "12a1a3dcb1736e2ad633daae8ee45f3053fec707a7d4adf1130256ca3cdbf992",
+        "size": "1792x2400",
+        "sourceChoiceVersion": 1,
+        "sourceContext": {
+          "brandKit": {
+            "font_style": "modern",
+            "name": "Finisterre",
+            "primary_color": "#253c38",
+            "secondary_color": "#e9e7d8"
+          },
+          "goal": "awareness",
+          "post": {
+            "callToAction": "Explore the collection.",
+            "channel": "Instagram",
+            "copyDraft": "Made for life where land ends. Finisterre offers outerwear, hardy knits and year-round adventure essentials, born from a love of the sea. Explore the collection.",
+            "day": 1,
+            "destinationUrl": "https://finisterre.com/",
+            "format": "Image advert",
+            "graphicText": "Made for life where land ends.",
+            "objective": "awareness",
+            "published": false,
+            "scheduled": false,
+            "status": "draft",
+            "supportingLine": "Outerwear. Hardy knits. Adventure essentials.",
+            "theme": "Showcase complete advert"
+          },
+          "sourceUrl": "https://finisterre.com/"
+        },
+        "sourceHash": "845a9e4f9359455ae8fc680dd132abbe8cbf66a472ccd3d3fedfaa9eb2fe4895",
+        "sourceRoute": "create",
+        "state": "proposed",
+        "technicalReview": {
+          "claimsVerified": false,
+          "flags": [],
+          "limitations": "Technical statistics cannot judge realism, marketing quality, brand accuracy or conversion.",
+          "ownerApproved": false,
+          "qualityStatus": "awaiting_visual_and_brand_review",
+          "resolution": [
+            1792,
+            2400
+          ]
+        },
+        "visualBrief": "PHOTOREALISTIC OUTDOOR CLOTHING CAMPAIGN, not illustration, painting, flat vector art or cartoon. Large real editorial fashion photograph: one adult seen from behind in an unbranded dark sea-green outer layer at a rugged Cornish-style headland, pale Atlantic surf, real textured rocks and grass, wind in garment fabric, natural overcast light, 35mm photographic optics, cinematic but natural tonal range. No visible face or invented product logo, no claim that this depicts an exact named garment. Large modern ivory headline and Finisterre business name, exact saved support line, strong readable collection CTA, all comfortably inset. Asymmetric sophisticated fashion layout with imagery full width and clean negative space for typography. Keep the coat, waves and rocks genuinely photographic. Finished ad only. No percentages, guides, annotations, blank logo panel or unused header block. Show business name as type. Include the exact CTA in a readable contrasting bottom area.",
+        "width": 1792
+      },
+      "originalBytesVerified": true
+    }
+  ],
+  "totalUniqueGenerationReservationsMicrousd": 2479320,
+  "reservationJobCount": 10,
+  "billingNote": "Reservations are estimates, not reconciled provider billing. Includes rejected earlier versions.",
+  "ownerApproved": false
+}

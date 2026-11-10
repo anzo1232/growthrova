@@ -1,0 +1,17 @@
+{
+  "internalLinePrefixes": [
+    "draft direction:",
+    "website excerpt (unconfirmed",
+    "source (unconfirmed):",
+    "owner constraints:",
+    "visual direction:",
+    "generation instructions:"
+  ],
+  "messages": {
+    "unwritten": "Write the customer-facing words before recording copy review; a business name alone is not a post.",
+    "notes": "Replace internal research or planning notes with customer-facing copy. Keep the source evidence in the website research panel.",
+    "question": "Add a useful explanation after the hook. Questions alone are not a complete post.",
+    "quotation": "Write original customer-facing copy; a quotation alone is source material, not a finished post.",
+    "cta": "Add a relevant call to action before recording copy review."
+  }
+}

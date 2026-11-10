@@ -1,0 +1,243 @@
+{
+  "provenance": "Historical controller real model sample; usable internal draft, commercial review PARTIAL. No fresh inference or owner approval.",
+  "sample": {
+    "posts": [
+      {
+        "angle": "Emergency plumbing outside normal working hours",
+        "callToAction": "Visit https://www.pimlicoplumbers.com/ to enquire about emergency plumbing repairs.",
+        "caption": "If you’re dealing with an urgent plumbing problem in London, Pimlico Plumbers offers 24/7 emergency plumbing repairs. You don’t have to wait until the next working day to make contact. Explain what’s happening and ask about the next step for your repair.",
+        "evidence": [
+          {
+            "id": "fact-2",
+            "quote": "Need a plumber fast? We provide 24/7 emergency plumbing repairs across London, acting quickly to protect your home. Call now to book a plumber in minutes."
+          },
+          {
+            "id": "brief-callToAction",
+            "quote": "Visit https://www.pimlicoplumbers.com/ to enquire about the current options."
+          }
+        ],
+        "hook": "A plumbing emergency doesn’t follow office hours."
+      },
+      {
+        "angle": "Finding appropriate help when heating or hot water fails",
+        "callToAction": "Visit https://www.pimlicoplumbers.com/ to enquire about emergency heating repairs.",
+        "caption": "When your heating or hot water stops working, knowing who to contact is a useful first step. Pimlico Plumbers offers emergency heating repairs across London with Gas Safe engineers. Tell the team whether you’ve lost heating, hot water or both, and enquire about a repair.",
+        "evidence": [
+          {
+            "id": "fact-3",
+            "quote": "No heating or hot water? We’ll send the best Gas Safe engineers for emergency heating repairs across London 24/7, often within the hour. Book in minutes."
+          },
+          {
+            "id": "brief-callToAction",
+            "quote": "Visit https://www.pimlicoplumbers.com/ to enquire about the current options."
+          }
+        ],
+        "hook": "No heating or hot water? Ask about Gas Safe engineer support."
+      },
+      {
+        "angle": "Landlords planning property maintenance",
+        "callToAction": "Visit https://www.pimlicoplumbers.com/ to enquire about landlord maintenance services.",
+        "caption": "Your rental property needs attention beyond the next repair. Pimlico Plumbers offers landlord maintenance services focused on breakdown prevention, compliance and looking after your investment. If you’re reviewing your property’s maintenance needs, start a conversation about the support available.",
+        "evidence": [
+          {
+            "id": "fact-8",
+            "quote": "Avoid unexpected breakdowns, remain compliant and protect your investment with our maintenance services for landlords."
+          },
+          {
+            "id": "brief-callToAction",
+            "quote": "Visit https://www.pimlicoplumbers.com/ to enquire about the current options."
+          }
+        ],
+        "hook": "Landlords: make maintenance part of the plan."
+      }
+    ],
+    "reel": {
+      "callToAction": "Visit https://www.pimlicoplumbers.com/ to enquire about emergency heating repairs.",
+      "caption": "If your London home has lost heating or hot water, Pimlico Plumbers offers emergency heating repairs with Gas Safe engineers. Describe what’s stopped working and ask about the current repair options.",
+      "evidence": [
+        {
+          "id": "fact-3",
+          "quote": "No heating or hot water? We’ll send the best Gas Safe engineers for emergency heating repairs across London 24/7, often within the hour. Book in minutes."
+        },
+        {
+          "id": "brief-callToAction",
+          "quote": "Visit https://www.pimlicoplumbers.com/ to enquire about the current options."
+        }
+      ],
+      "hook": "No heating or hot water? Start with the right enquiry.",
+      "shots": [
+        {
+          "onScreen": "No heating? No hot water?",
+          "seconds": 6,
+          "visual": "Film a radiator in an authorised residential location. Use a still, close composition; do not stage a fault or imply a diagnosis.",
+          "voiceover": "No heating or hot water at home? Start by describing what’s stopped working."
+        },
+        {
+          "onScreen": "London emergency heating repairs • Gas Safe engineers",
+          "seconds": 7,
+          "visual": "Film the exterior of a heating unit at the same authorised location, without opening it or showing any repair work.",
+          "voiceover": "Pimlico Plumbers offers emergency heating repairs across London with Gas Safe engineers."
+        },
+        {
+          "onScreen": "Tell the team: heating, hot water, or both",
+          "seconds": 7,
+          "visual": "Show a simple animated text checklist, revealing each symptom category in turn. No customer or service footage is required.",
+          "voiceover": "When you enquire, explain whether you’ve lost heating, hot water, or both."
+        },
+        {
+          "onScreen": "Enquire at https://www.pimlicoplumbers.com/",
+          "seconds": 7,
+          "visual": "Finish on a clean text card with the business name and website address. Do not create or substitute a logo.",
+          "voiceover": "Visit the Pimlico Plumbers website to enquire about the current repair options."
+        }
+      ]
+    }
+  },
+  "material": {
+    "audience": {
+      "status": "owner_planning_input",
+      "value": "Potential customers considering Pimlico Plumbers (suggested audience; review before confirming)."
+    },
+    "business": "Pimlico Plumbers",
+    "constraints": "Website-derived draft suggestions only. Review the audience, offering and next step before confirming. Use only reviewed facts; do not invent prices, offers, testimonials, availability or outcomes. Check date-sensitive claims. No media, publication or spending approval.",
+    "evidence": [
+      {
+        "id": "fact-0",
+        "quote": "Pimlico Plumbers | Plumbing, Heating & Electrical Services in London",
+        "sourceUrl": "https://www.pimlicoplumbers.com/",
+        "status": "owner_reviewed_observation"
+      },
+      {
+        "id": "fact-1",
+        "quote": "Pimlico Plumbers is London’s trusted property maintenance service company, handling your plumbing, heating, electrical, building, renovation and HVAC needs.",
+        "sourceUrl": "https://www.pimlicoplumbers.com/",
+        "status": "owner_reviewed_observation"
+      },
+      {
+        "id": "fact-2",
+        "quote": "Need a plumber fast? We provide 24/7 emergency plumbing repairs across London, acting quickly to protect your home. Call now to book a plumber in minutes.",
+        "sourceUrl": "https://www.pimlicoplumbers.com/",
+        "status": "owner_reviewed_observation"
+      },
+      {
+        "id": "fact-3",
+        "quote": "No heating or hot water? We’ll send the best Gas Safe engineers for emergency heating repairs across London 24/7, often within the hour. Book in minutes.",
+        "sourceUrl": "https://www.pimlicoplumbers.com/",
+        "status": "owner_reviewed_observation"
+      },
+      {
+        "id": "fact-7",
+        "quote": "For Emergencies Call Us 24/7",
+        "sourceUrl": "https://www.pimlicoplumbers.com/",
+        "status": "owner_reviewed_observation"
+      },
+      {
+        "id": "fact-8",
+        "quote": "Avoid unexpected breakdowns, remain compliant and protect your investment with our maintenance services for landlords.",
+        "sourceUrl": "https://www.pimlicoplumbers.com/",
+        "status": "owner_reviewed_observation"
+      },
+      {
+        "id": "fact-9",
+        "quote": "Whatever sector you work in, our commercial maintenance services are designed to keep your premises safe, compliant and running smoothly.",
+        "sourceUrl": "https://www.pimlicoplumbers.com/",
+        "status": "owner_reviewed_observation"
+      },
+      {
+        "id": "fact-13",
+        "quote": "London’s No.1 in improving and maintaining properties for over 45 years",
+        "sourceUrl": "https://www.pimlicoplumbers.com/",
+        "status": "owner_reviewed_observation"
+      },
+      {
+        "id": "fact-18",
+        "quote": "Core Services",
+        "sourceUrl": "https://www.pimlicoplumbers.com/",
+        "status": "owner_reviewed_observation"
+      },
+      {
+        "id": "fact-19",
+        "quote": "All Plumbing",
+        "sourceUrl": "https://www.pimlicoplumbers.com/",
+        "status": "owner_reviewed_observation"
+      },
+      {
+        "id": "fact-20",
+        "quote": "All Heating",
+        "sourceUrl": "https://www.pimlicoplumbers.com/",
+        "status": "owner_reviewed_observation"
+      },
+      {
+        "id": "fact-21",
+        "quote": "All Electrical",
+        "sourceUrl": "https://www.pimlicoplumbers.com/",
+        "status": "owner_reviewed_observation"
+      },
+      {
+        "id": "fact-22",
+        "quote": "All Drains",
+        "sourceUrl": "https://www.pimlicoplumbers.com/",
+        "status": "owner_reviewed_observation"
+      },
+      {
+        "id": "fact-23",
+        "quote": "All Carpentry",
+        "sourceUrl": "https://www.pimlicoplumbers.com/",
+        "status": "owner_reviewed_observation"
+      },
+      {
+        "id": "fact-24",
+        "quote": "All Roofing",
+        "sourceUrl": "https://www.pimlicoplumbers.com/",
+        "status": "owner_reviewed_observation"
+      },
+      {
+        "id": "fact-25",
+        "quote": "All Air Conditioning",
+        "sourceUrl": "https://www.pimlicoplumbers.com/",
+        "status": "owner_reviewed_observation"
+      },
+      {
+        "id": "fact-26",
+        "quote": "All Building Works",
+        "sourceUrl": "https://www.pimlicoplumbers.com/",
+        "status": "owner_reviewed_observation"
+      },
+      {
+        "id": "fact-27",
+        "quote": "Plumbing Emergency",
+        "sourceUrl": "https://www.pimlicoplumbers.com/",
+        "status": "owner_reviewed_observation"
+      },
+      {
+        "id": "brief-offer",
+        "quote": "Need a plumber fast? We provide 24/7 emergency plumbing repairs across London, acting quickly to protect your home. Call now to book a plumber in minutes.\nNo heating or hot water? We’ll send the best Gas Safe engineers for emergency heating repairs across London 24/7, often within the hour. Book in minutes.",
+        "sourceUrl": "",
+        "status": "owner_input"
+      },
+      {
+        "id": "brief-positioning",
+        "quote": "Suggested service focus to review:\nNeed a plumber fast? We provide 24/7 emergency plumbing repairs across London, acting quickly to protect your home. Call now to book a plumber in minutes.\nNo heating or hot water? We’ll send the best Gas Safe engineers for emergency heating repairs across London 24/7, often within the hour. Book in minutes.",
+        "sourceUrl": "",
+        "status": "owner_input"
+      },
+      {
+        "id": "brief-callToAction",
+        "quote": "Visit https://www.pimlicoplumbers.com/ to enquire about the current options.",
+        "sourceUrl": "",
+        "status": "owner_input"
+      },
+      {
+        "id": "brief-constraints",
+        "quote": "Website-derived draft suggestions only. Review the audience, offering and next step before confirming. Use only reviewed facts; do not invent prices, offers, testimonials, availability or outcomes. Check date-sensitive claims. No media, publication or spending approval.",
+        "sourceUrl": "",
+        "status": "owner_input"
+      }
+    ],
+    "goal": {
+      "status": "owner_planning_input",
+      "value": "enquiries"
+    },
+    "website": "https://www.pimlicoplumbers.com/"
+  }
+}

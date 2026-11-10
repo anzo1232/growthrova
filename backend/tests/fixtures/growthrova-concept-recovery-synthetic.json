@@ -1,0 +1,96 @@
+{
+  "concepts": [
+    {
+      "buyerMotivation": "Prepare for the weekday commute",
+      "headline": "A conversation about bicycle care",
+      "callToAction": "Contact the workshop.",
+      "visualDirection": "An illustrated telephone receiver and empty note card, diagonal light and broad left text area.",
+      "evidence": [
+        {
+          "id": "fact-0",
+          "quote": "We offer bicycle servicing and brake adjustments."
+        }
+      ],
+      "supportingLine": ""
+    },
+    {
+      "buyerMotivation": "Discuss a brake adjustment",
+      "headline": "Look closely at the cable",
+      "callToAction": "Contact the workshop.",
+      "visualDirection": "An abstract copper cable looping around a paper circle, overhead framing and an open right margin.",
+      "evidence": [
+        {
+          "id": "fact-0",
+          "quote": "We offer bicycle servicing and brake adjustments."
+        }
+      ],
+      "supportingLine": ""
+    },
+    {
+      "buyerMotivation": "Plan bicycle servicing",
+      "headline": "Take a moment to plan",
+      "callToAction": "Contact the workshop.",
+      "visualDirection": "A folded route map beside a bicycle lamp, editorial still life and a quiet lower copy zone.",
+      "evidence": [
+        {
+          "id": "fact-0",
+          "quote": "We offer bicycle servicing and brake adjustments."
+        }
+      ],
+      "supportingLine": ""
+    },
+    {
+      "buyerMotivation": "Understand what to discuss before booking",
+      "headline": "Bring your questions along",
+      "callToAction": "Contact the workshop.",
+      "visualDirection": "Two folded paper forms facing one another, warm shadows and a generous central headline space.",
+      "evidence": [
+        {
+          "id": "fact-0",
+          "quote": "We offer bicycle servicing and brake adjustments."
+        }
+      ],
+      "supportingLine": ""
+    },
+    {
+      "buyerMotivation": "Return to cycling after time away",
+      "headline": "Give the bicycle a place",
+      "callToAction": "Contact the workshop.",
+      "visualDirection": "A quiet doorway with a bicycle shadow across the floor, distant framing and an open upper margin.",
+      "evidence": [
+        {
+          "id": "fact-0",
+          "quote": "We offer bicycle servicing and brake adjustments."
+        }
+      ],
+      "supportingLine": ""
+    },
+    {
+      "buyerMotivation": "Arrange care around a busy schedule",
+      "headline": "Discuss the ride ahead",
+      "callToAction": "Contact the workshop.",
+      "visualDirection": "A striped commuter scarf on a wooden stool, cropped close with restrained typography above.",
+      "evidence": [
+        {
+          "id": "fact-0",
+          "quote": "We offer bicycle servicing and brake adjustments."
+        }
+      ],
+      "supportingLine": ""
+    }
+  ],
+  "recommendations": [
+    {
+      "conceptIndex": 0,
+      "reason": "Connects the reviewed servicing offer with weekday commuters."
+    },
+    {
+      "conceptIndex": 1,
+      "reason": "Makes the reviewed brake adjustment service easy to recognise."
+    },
+    {
+      "conceptIndex": 2,
+      "reason": "Shows the broader servicing offer in a contrasting editorial layout."
+    }
+  ]
+}

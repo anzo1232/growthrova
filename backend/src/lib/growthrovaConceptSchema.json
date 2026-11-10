@@ -1,0 +1,116 @@
+{
+  "type": "object",
+  "properties": {
+    "concepts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "buyerMotivation": {
+            "type": "string",
+            "minLength": 12,
+            "maxLength": 240
+          },
+          "heroVisual": {
+            "type": "string",
+            "minLength": 20,
+            "maxLength": 300
+          },
+          "conceptLogic": {
+            "type": "string",
+            "minLength": 20,
+            "maxLength": 300
+          },
+          "headline": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 160
+          },
+          "supportingLine": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 180
+          },
+          "callToAction": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 240
+          },
+          "visualDirection": {
+            "type": "string",
+            "minLength": 30,
+            "maxLength": 1200
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 80
+                },
+                "quote": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 600
+                }
+              },
+              "required": [
+                "id",
+                "quote"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1,
+            "maxItems": 8
+          }
+        },
+        "required": [
+          "buyerMotivation",
+          "heroVisual",
+          "conceptLogic",
+          "headline",
+          "supportingLine",
+          "callToAction",
+          "visualDirection",
+          "evidence"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 6,
+      "maxItems": 6
+    },
+    "recommendations": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "properties": {
+          "conceptIndex": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 5
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 12,
+            "maxLength": 300
+          }
+        },
+        "required": [
+          "conceptIndex",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "concepts",
+    "recommendations"
+  ],
+  "additionalProperties": false
+}

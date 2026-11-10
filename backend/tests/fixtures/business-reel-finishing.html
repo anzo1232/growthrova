@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Isolated Reel finishing acceptance</title></head>
+<body><div id="root"></div>
+<script type="module">
+import React from 'react';
+import {createRoot} from 'react-dom/client';
+import BusinessReelWorkbench from '/src/BusinessReelWorkbench.jsx';
+import '/src/BusinessAgencyPreview.css';
+const scenario=new URL(location.href).searchParams.get('case')||'captions';
+const h=character=>character.repeat(64);
+let project={
+ id:'finishing-fixture',draftId:'f'.repeat(32),revision:1,business:'Fixture Studio',isCurrentRevision:true,
+ acceptedShots:4,totalSlots:4,rejectedShots:0,customerAllowanceConsumed:0,providerCreditsForThisReel:0,
+ providerCostUnreconciledJobs:0,providerSubmissionUnknownJobs:0,
+ slots:['hook','craft','experience','payoff'].map(slot=>({slot,sourceDirection:'Original '+slot,sourceEvidence:'Owner fixture footage',productionStatus:'accepted',
+   ...(slot==='payoff'?{localGraphic:true,masterLogoUsed:true}:{})})),
+ edits:[{variant:'a',style:'Social-first',estimatedSeconds:6,revision:1,contentSha256:h('a')},{variant:'b',style:'Cinematic',estimatedSeconds:6,revision:1,contentSha256:h('b')}],
+ brandLock:{locked:true,brandName:'Fixture Studio',style:'editorial',primary:'#18352B',accent:'#D8B37A',contactUrl:'https://fixture.example.org/',logoSha256:h('1')},
+ captionTracks:{
+  a:{cues:[{start:0.2,end:4,text:'The owner’s actual opening hook'}],source:'owner_written_text',style:{typeface:'editorial',weight:'bold',placement:'middle_safe'},captionRevision:1,editRevision:1},
+  b:{cues:[{start:0.2,end:4,text:'A distinct cinematic caption'}],source:'owner_verified_transcript',style:{typeface:'editorial',weight:'bold',placement:'bottom_safe'},captionRevision:1,editRevision:1}
+ },
+ bothEditsQualityChecked:true,reviewSetSha256:h('d'),localOwnerChoiceRecorded:false,feedback:[],recovery:{providerChoices:[]}
+};
+if(scenario==='media'){
+ project.edits=[];project.captionTracks={};project.bothEditsQualityChecked=false;
+ project.slots[0].ownerMediaSelectionAllowed=false;
+ project.slots[1].productionStatus='provider_failed';project.slots[1].ownerMediaSelectionAllowed=true;
+ project.slots[2].productionStatus='not_generated';project.slots[2].ownerMediaSelectionAllowed=true;
+}
+if(scenario==='media'){
+ project.build7Readiness={passed:2,total:13,readyForPrivateHandoff:false,blockingActions:[
+  {code:'approved_craft',nextAction:'Supply actual owner-authorised footage and secure internal visual approval'},
+  {code:'cut_a',nextAction:'Render the complete social-first cut from accepted shots'}]};
+ project.slots[1].creativeReviewTriage={disposition:'human_review_required',reviewTasks:[
+  {code:'human_scene_integrity',instruction:'Manually check food accuracy and real brand details'}]};
+ project.slots[1].technicalQC={technicalMotionPass:true,cheapVisualReview:{frameSamples:[{timeSeconds:1}]}};
+}
+if(scenario==='typography'){
+ project.bothEditsQualityChecked=false;project.captionTracks.a.style.typeface='modern';
+}
+if(scenario==='delivery'){
+ project.bothEditsQualityChecked=false;
+ for(const track of Object.values(project.captionTracks))track.cues[0].text='Synthetic QA captions in this video';
+}
+const requests=[];let hasSource=false,tamperDelivery=false;
+let deferNext=null,pending=null;
+function respond(kind,answer){
+ if(deferNext!==kind)return answer;
+ deferNext=null;
+ return new Promise((resolve,reject)=>{pending=fail=>{pending=null;fail?reject(Error('Old campaign request failed')):resolve(answer);};});
+}
+const copy=()=>{
+ const state=structuredClone(project);
+ if(scenario!=='media'){
+  const ready=project.isCurrentRevision===true&&project.bothEditsQualityChecked&&project.localOwnerChoiceRecorded&&
+   project.providerCostUnreconciledJobs===0&&project.providerSubmissionUnknownJobs===0;
+  state.build7Readiness={passed:ready?13:12,total:13,readyForPrivateHandoff:Boolean(ready),blockingActions:ready?[]:[
+   {code:'remaining_review',nextAction:'Complete the current owner, quality and spend checks'}]};
+ }
+ return state;
+};
+const fail=message=>{const e=Error(message);e.status=409;throw e;};
+const time=value=>'00:00:'+Number(value).toFixed(3).padStart(6,'0');
+async function api(path,{method='GET',data,responseType}={}){
+ requests.push({path,method,data:structuredClone(data)});
+ const url=new URL(path,location.origin),parts=url.pathname.split('/'),variant=parts.at(-1);
+ if(path==='/api/pilot/sources')return {sources:hasSource?[{id:'owner-source',status:'done',mime:'video/mp4',filename:'My original footage.mp4'}]:[]};
+ if(path.startsWith('/api/pilot/website-photos?'))return {photos:[]};
+ if(method==='GET'&&url.pathname==='/api/pilot/reel-workbench')return {project:copy()};
+ if(method==='GET'&&url.pathname.includes('/previews/')){
+  const edit=project.edits.find(x=>x.variant===variant);
+  if(url.searchParams.get('contentSha256')!==edit.contentSha256)fail('Stale cut requested');
+  return (await fetch(edit.captionsBakedIntoVideo?'/__business-finishing-captioned.mp4':'/__business-finishing-fixture.mp4')).blob();
+ }
+ if(method==='GET'&&url.pathname.includes('/captions/')){
+  if(scenario==='stale')fail('This caption version changed');
+  const edit=project.edits.find(x=>x.variant===variant);
+  if(url.searchParams.get('contentSha256')!==edit.contentSha256)fail('Stale captions requested');
+  const track=project.captionTracks[variant];
+  return new Blob(['WEBVTT\n\n'+track.cues.map(c=>time(c.start)+' --> '+time(c.end)+'\n'+c.text).join('\n\n')+'\n'],{type:'text/vtt'});
+ }
+ if(method==='POST'&&variant==='render-captions'){
+  const edit=project.edits.find(x=>x.variant===data.variant),track=project.captionTracks[data.variant];
+  if(data.expectedContentSha256!==edit?.contentSha256||data.expectedEditRevision!==edit?.revision||
+   data.expectedCaptionRevision!==track?.captionRevision)fail('Stale render requested');
+  const media=await (await fetch('/__business-finishing-captioned.mp4')).blob();
+  const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',await media.arrayBuffer())),byte=>byte.toString(16).padStart(2,'0')).join('');
+  edit.captionExport={id:'render-'+data.variant,sha256:digest,bytes:media.size,
+   captionRevision:track.captionRevision,inputContentSha256:data.expectedContentSha256};
+  edit.captionsBakedIntoVideo=true;edit.contentSha256=h(data.variant==='a'?'2':'3');
+  project.reviewSetSha256=h('4');project.bothEditsQualityChecked=false;project.localOwnerChoiceRecorded=false;
+  return respond('render-captions',{project:copy()});
+ }
+ if(method==='GET'&&url.pathname.includes('/deliveries/')){
+  const edit=project.edits.find(x=>x.variant===variant);
+  if(!project.localOwnerChoiceRecorded||!project.bothEditsQualityChecked||
+   project.locallySelectedVariant!==variant||!edit?.captionsBakedIntoVideo||
+   url.searchParams.get('contentSha256')!==edit.contentSha256||
+   url.searchParams.get('reviewSetSha256')!==project.reviewSetSha256)fail('Stale approved download requested');
+  const blob=await (await fetch(tamperDelivery?'/__business-finishing-fixture.mp4':'/__business-finishing-captioned.mp4')).blob();
+  return respond('download',blob);
+ }
+ if(method==='POST'&&variant==='feedback'){project.feedback.push(data);return respond('feedback',{project:copy()});}
+ if(method==='POST'&&variant==='captions'){
+  const edit=project.edits.find(x=>x.variant===data.variant),track=project.captionTracks[data.variant];
+  if(data.expectedEditRevision!==edit.revision||data.expectedCaptionRevision!==(track?.captionRevision||0))fail('Stale caption save');
+  project.captionTracks[data.variant]={...structuredClone(data),captionRevision:(track?.captionRevision||0)+1,editRevision:edit.revision};
+  edit.captionsBakedIntoVideo=false;delete edit.captionExport;
+  edit.contentSha256=h('f');project.reviewSetSha256=h('c');project.bothEditsQualityChecked=false;project.localOwnerChoiceRecorded=false;
+  return respond('captions',{project:copy()});
+ }
+ if(method==='POST'&&variant==='owner-choice'){
+  const edit=project.edits.find(x=>x.variant===data.variant);
+  if(!project.bothEditsQualityChecked||data.expectedContentSha256!==edit.contentSha256||data.expectedReviewSetSha256!==project.reviewSetSha256)fail('Stale owner choice');
+  project.localOwnerChoiceRecorded=true;project.locallySelectedVariant=data.variant;return {project:copy()};
+ }
+ if(method==='POST'&&variant==='owner-video'){
+  const slot=project.slots.find(x=>x.slot===data.slot);
+  if(!slot?.ownerMediaSelectionAllowed||data.sourceId!=='owner-source')fail('Wrong source stage');
+  slot.productionStatus='awaiting_internal_visual_review';slot.ownerMediaSelectionAllowed=false;slot.originalSourceId=data.sourceId;return {project:copy()};
+ }
+ throw Error('Unexpected fixture API request: '+method+' '+path);
+}
+window.__finishingFixture={
+ requests,get project(){return project;},
+ provideSource(){hasSource=true;},
+ reviewPair(){if(!project.edits.every(edit=>edit.captionsBakedIntoVideo))fail('Both rendered cuts required');project.bothEditsQualityChecked=true;},
+ tamperDelivery(){tamperDelivery=true;},
+ setUnreconciled(value){project.providerCostUnreconciledJobs=value?1:0;},
+ bumpPair(){project.edits[1].contentSha256=h('e');project.edits[1].revision=2;project.captionTracks.b.editRevision=2;project.reviewSetSha256=h('9');},
+ deferNext(kind){deferNext=kind;},hasPending(){return Boolean(pending);},
+ releasePending(fail=false){if(pending)pending(fail);},
+ switchCampaign(){project={...copy(),id:'second-fixture',draftId:'8'.repeat(32),revision:2,business:'Second fixture campaign',
+  brandLock:{...project.brandLock,brandName:'Second fixture campaign'},edits:[],captionTracks:{},feedback:[],bothEditsQualityChecked:false,localOwnerChoiceRecorded:false};renderFixture();}
+};
+const root=createRoot(document.getElementById('root'));
+function renderFixture(){root.render(React.createElement('main',{className:'ba-root',style:{padding:'16px',maxWidth:'1100px',margin:'auto'}},
+ React.createElement('aside',{style:{position:'sticky',top:0,zIndex:50,padding:'10px 16px',background:'#fff3cd',color:'#433d24',font:'600 14px Arial',border:'1px solid #dccf97'}},'Synthetic QA preview · not a client campaign'),
+ React.createElement(BusinessReelWorkbench,{api,draftId:project.draftId,revision:project.revision,unsaved:false,document:{business:project.business,sourceUrl:'https://fixture.example.org/',editorialShortlist:{}}})));}
+renderFixture();
+</script></body></html>

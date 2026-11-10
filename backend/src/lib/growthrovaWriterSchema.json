@@ -1,0 +1,163 @@
+{
+  "type": "object",
+  "properties": {
+    "posts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "angle": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 180
+          },
+          "hook": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "caption": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1600
+          },
+          "callToAction": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 80
+                },
+                "quote": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 600
+                }
+              },
+              "required": [
+                "id",
+                "quote"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1,
+            "maxItems": 8
+          }
+        },
+        "required": [
+          "angle",
+          "hook",
+          "caption",
+          "callToAction",
+          "evidence"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "reel": {
+      "type": "object",
+      "properties": {
+        "hook": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "caption": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "callToAction": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "shots": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "seconds": {
+                "type": "integer",
+                "minimum": 2,
+                "maximum": 10
+              },
+              "visual": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 400
+              },
+              "voiceover": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 400
+              },
+              "onScreen": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              }
+            },
+            "required": [
+              "seconds",
+              "visual",
+              "voiceover",
+              "onScreen"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 3,
+          "maxItems": 6
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 80
+              },
+              "quote": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 600
+              }
+            },
+            "required": [
+              "id",
+              "quote"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 8
+        }
+      },
+      "required": [
+        "hook",
+        "caption",
+        "callToAction",
+        "shots",
+        "evidence"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "posts",
+    "reel"
+  ],
+  "additionalProperties": false
+}
